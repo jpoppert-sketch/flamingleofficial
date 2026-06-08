@@ -299,9 +299,87 @@
       font-weight: 700;
       font-size: 15px;
     }
+    /* ─── NAV ─── */
+    .nav {
+      background: var(--white);
+      border-bottom: 2px solid var(--coral-light);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .nav a {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--coral);
+      text-decoration: none;
+    }
+
+    .nav a:hover {
+      color: var(--coral-dark);
+    }
+
+    /* ─── FIELD GUIDE TEASER ─── */
+    .guide-teaser {
+      background: var(--coral-light);
+      padding: 80px 24px;
+      text-align: center;
+    }
+
+    .guide-teaser-inner {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .guide-teaser .section-eyebrow {
+      color: var(--coral);
+    }
+
+    .guide-teaser h2 {
+      font-family: 'Abril Fatface', Georgia, serif;
+      font-size: clamp(28px, 5vw, 44px);
+      color: var(--charcoal);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .guide-teaser p {
+      font-size: clamp(15px, 2vw, 17px);
+      color: var(--charcoal);
+      line-height: 1.7;
+      margin-bottom: 32px;
+      opacity: 0.8;
+    }
+
+    .btn-guide {
+      display: inline-block;
+      padding: 16px 36px;
+      background: var(--coral);
+      color: var(--white);
+      font-family: 'Nunito', Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .btn-guide:hover {
+      background: var(--coral-dark);
+    }
+
   </style>
 </head>
 <body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="field-guide.html">Read the Field Guide →</a>
+  </nav>
+
 
   <!-- HERO -->
   <section class="hero">
@@ -357,6 +435,16 @@
   </section>
 
   <!-- BOTTOM CTA -->
+  <!-- FIELD GUIDE TEASER -->
+  <section class="guide-teaser">
+    <div class="guide-teaser-inner">
+      <div class="section-eyebrow">The Field Guide</div>
+      <h2>Not sure how this works?<br>We wrote the book.</h2>
+      <p>Everything you need to know about wearing the signal, spotting the signal, and actually talking to someone in real life. Short, fun, and mercifully free of dating advice.</p>
+      <a href="field-guide.html" class="btn-guide">Read the Field Guide →</a>
+    </div>
+  </section>
+
   <section class="cta">
     <div class="cta-inner">
       <h2>Find Your Flock.</h2>
