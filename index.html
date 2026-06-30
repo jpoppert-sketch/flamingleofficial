@@ -137,6 +137,34 @@
       margin-top: 12px;
     }
 
+    /* ─── HERO CTA ─── */
+    .hero-cta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .btn-shop {
+      display: inline-block;
+      padding: 18px 44px;
+      background: var(--coral);
+      color: var(--white);
+      font-family: 'Nunito', Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .btn-shop:hover {
+      background: var(--coral-dark);
+    }
+
+    .hero-cta .form-note {
+      margin-top: 14px;
+    }
+
     /* ─── WHAT IS THIS ─── */
     .what {
       background: var(--coral);
@@ -542,14 +570,9 @@
     <h1>You Single?<br>Let's Flamingle<sup style="font-size:0.45em">&trade;</sup>.</h1>
     <p class="hero-sub">Get off the apps. Get back into the real world. One symbol, one meaning — wear the flamingo and let the magic happen.</p>
 
-    <div class="form-wrap">
-      <label class="form-label">Join the Flock</label>
-      <form class="form-row" action="https://formspree.io/f/xqeoqwlo" method="POST" id="hero-form">
-        <input type="email" name="email" placeholder="your@email.com" required>
-        <button type="submit">I'm In</button>
-      </form>
-      <p class="form-note">No spam. Just the flamingo.</p>
-      <p class="success-msg" id="hero-success">You're in the flock. We'll be in touch. 🦩</p>
+    <div class="hero-cta">
+      <a href="https://shop.flamingleofficial.com" class="btn-shop">Shop the Collection →</a>
+      <p class="form-note">Wear the signal. Find your Flock.</p>
     </div>
   </section>
 
@@ -577,7 +600,7 @@
         <div class="step">
           <div class="step-number">02</div>
           <h3>Spot the Signal</h3>
-          <p>See someone wearing the flamingo? You already have permission. Walk over. Say hello. But don't be an a**hole.</p>
+          <p>See someone wearing the flamingo? Walk over. Say hello. It's that easy. But don't be an a**hole.</p>
         </div>
         <div class="step">
           <div class="step-number">03</div>
@@ -637,7 +660,6 @@
         });
       });
     }
-    handleForm('hero-form', 'hero-success');
     handleForm('cta-form', 'cta-success');
   </script>
 
@@ -651,6 +673,7 @@
   </script>
 </body>
 </html>
+
 
 
 
