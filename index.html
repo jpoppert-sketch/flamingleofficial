@@ -140,8 +140,11 @@
     /* ─── HERO CTA ─── */
     .hero-cta {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
       align-items: center;
+      gap: 16px;
     }
 
     .btn-shop {
@@ -172,8 +175,8 @@
       border-radius: 8px;
       text-decoration: none;
       border: 2px solid var(--coral);
+      box-sizing: border-box;
       transition: background 0.2s, color 0.2s;
-      margin-top: 12px;
     }
 
     .btn-map:hover {
