@@ -389,6 +389,15 @@
 
     .nav-links a:hover { color: var(--coral); }
 
+    .nav-links a.nav-cta {
+      background: var(--coral);
+      color: #fff;
+      padding: 7px 16px;
+      border-radius: 20px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .nav-links a.nav-cta:hover { background: #d45f49; color: #fff; }
+
     .nav-social {
       display: flex;
       align-items: center;
@@ -461,6 +470,8 @@
 
     .nav-mobile a:last-child { border-bottom: none; }
     .nav-mobile a:hover { color: var(--coral); }
+    .nav-mobile a.nav-cta { color: var(--coral); font-weight: 800; }
+    .nav-mobile a.nav-cta:hover { color: #d45f49; }
 
     .nav-mobile-social {
       display: flex;
@@ -543,8 +554,8 @@
   <nav class="nav">
     <a href="index.html"><img src="flamingo_logo_transparent.png" alt="Flamingle" class="nav-logo-img"></a>
     <div class="nav-links">
-      <a href="https://shop.flamingleofficial.com">Shop</a>
-      <a href="https://app.flamingleofficial.com">Find the Flock</a>
+      <a href="https://shop.flamingleofficial.com" class="nav-cta">Shop</a>
+      <a href="https://app.flamingleofficial.com" class="nav-cta">Find the Flock</a>
       <a href="field-guide.html">Field Guide</a>
       <a href="team.html">Team</a>
       <a href="contact.html">Contact</a>
@@ -570,8 +581,8 @@
 
   <!-- MOBILE MENU -->
   <div class="nav-mobile" id="nav-mobile">
-    <a href="https://shop.flamingleofficial.com">Shop</a>
-    <a href="https://app.flamingleofficial.com">Find the Flock</a>
+    <a href="https://shop.flamingleofficial.com" class="nav-cta">Shop</a>
+    <a href="https://app.flamingleofficial.com" class="nav-cta">Find the Flock</a>
     <a href="field-guide.html">Field Guide</a>
     <a href="team.html">Team</a>
     <a href="contact.html">Contact</a>
