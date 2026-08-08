@@ -71,6 +71,27 @@
       line-height: 1.7;
     }
 
+    /* ─── SIGNAL ─── */
+    .signal-box {
+      background: var(--coral-light);
+      padding: 48px 24px;
+      text-align: center;
+    }
+
+    .signal-box img {
+      width: 130px;
+      height: auto;
+      margin: 0 auto 20px;
+      display: block;
+    }
+
+    .signal-box p {
+      font-family: 'Abril Fatface', Georgia, serif;
+      font-size: clamp(20px, 3vw, 28px);
+      color: var(--charcoal);
+      margin: 0;
+    }
+
     /* ─── BODY ─── */
     .page-body {
       max-width: 720px;
@@ -256,6 +277,35 @@
 
     .btn-email:hover { background: var(--coral-dark); }
 
+    /* ─── FOUNDER LINK ─── */
+    .founder-link {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      margin-bottom: 32px;
+    }
+
+    .founder-link img {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--coral);
+    }
+
+    .founder-link span {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      transition: color 0.2s;
+    }
+
+    .founder-link:hover span { color: var(--coral); }
+
     /* ─── FOOTER ─── */
     footer {
       background: var(--charcoal);
@@ -289,6 +339,12 @@
     <p>Flamingle<sup style="font-size:0.45em">&trade;</sup> helps local venues — bars, studios, coffee shops, social sports clubs — attract a loyal, recurring singles community by giving you exposure and a user-friendly platform to create flock-friendly events, get placed on our interactive map, and even draft your social posts with built-in AI. We're only naming a limited number of Official Flock Spots per venue type — get in now, and you become a cherished, go-to venue for the singles community we're building.</p>
   </header>
 
+  <!-- THE SIGNAL -->
+  <div class="signal-box">
+    <img src="flamingo_logo_transparent.png" alt="Flamingle">
+    <p>Wear the flamingo. Spot the flamingo. Say hi.</p>
+  </div>
+
   <!-- BODY -->
   <main class="page-body">
 
@@ -306,7 +362,7 @@
     <section class="page-section">
       <div class="section-eyebrow">Being Honest About It</div>
       <h2>The Flock's Already Circling. We Just Need a Place to Land.</h2>
-      <p>It's not that people forgot how to connect — it's that dating apps killed the spirit to try. We're building an excited flock of singles ready to get off the apps and back into real life: wear the flamingo, spot the flamingo, say hi. It's cute, it's fun, and it's a genuinely honest way to meet people again — the kind of spark that happened before algorithms got involved.</p>
+      <p>It's not that people forgot how to connect — it's that dating apps killed the spirit to try. We're building an excited flock of singles ready to get off the apps and back into real life. It's cute, it's fun, and it's a genuinely honest way to meet people again — the kind of spark that happened before algorithms got involved.</p>
 
       <div class="callout">
         <p>"No one approaches anymore."</p>
@@ -387,7 +443,7 @@
           <div class="step-number">1</div>
           <div class="step-content">
             <h3>Talk to me directly</h3>
-            <p>Reply to my email or text. Tell me about your venue — what you do, where you are, what nights you'd want Flaminglers showing up. I live right here in Denver, too — invite me over and we can talk through the details in person.</p>
+            <p>Reply to my email. Tell me about your venue — what you do, where you are, what nights you'd want Flaminglers showing up. I live right here in Denver, too — invite me over and we can talk through the details in person.</p>
           </div>
         </div>
         <div class="step">
@@ -425,7 +481,15 @@
       <h2>Let's Build<br>This Together.</h2>
       <p>I already think you're the right partner for this — let's find time to meet and walk through the platform together.</p>
       <p class="detail">I'm onboarding a small number of founding partners in Denver right now — places that can be a safe, supportive spot for our flock. Early partners keep that status for good.</p>
-      <a href="mailto:jpoppert@gmail.com?subject=Official Flock Spot — Founding Partner Interest" class="btn-email">Let's Meet →</a>
+
+      <a href="team.html#founder" class="founder-link">
+        <img src="joel-poppert.JPEG" alt="Joel Poppert, Founder">
+        <span>Curious who's asking? Meet Joel →</span>
+      </a>
+
+      <div>
+        <a href="mailto:jpoppert@gmail.com?subject=Official Flock Spot — Founding Partner Interest" class="btn-email">Let's Meet →</a>
+      </div>
     </div>
   </section>
 
