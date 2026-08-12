@@ -186,13 +186,10 @@
     /* ─── ROLES ─── */
     .roles-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: minmax(0, 420px);
+      justify-content: center;
       gap: 24px;
       margin-top: 32px;
-    }
-
-    @media (max-width: 640px) {
-      .roles-grid { grid-template-columns: 1fr; }
     }
 
     .role-card {
@@ -431,7 +428,7 @@
     <section class="page-section">
       <div class="section-eyebrow">Join the Team</div>
       <h2>We're Building Something Real.<br>Come Build It With Us.</h2>
-      <p>Flamingle is early stage and looking for people who want to get in at the ground floor — not as employees, but as partners. Two roles are open now.</p>
+      <p>Flamingle is early stage and looking for people who want to get in at the ground floor — not as employees, but as partners. One role is open now.</p>
 
       <div class="roles-grid">
 
@@ -440,13 +437,6 @@
           <h3>Chief Content Officer / Co-Founder</h3>
           <p>You own the story. TikTok, Instagram, brand voice, community — this is your lane. We need someone who gets the Denver social scene, has a natural creator instinct, and wants to build something from the ground up rather than execute someone else's plan.</p>
           <a href="collab.html" class="role-link">Learn More →</a>
-        </div>
-
-        <div class="role-card">
-          <div class="role-tag">Tech &amp; Product</div>
-          <h3>Technical Co-Founder / CTO</h3>
-          <p>You build the app. React Native, Expo, Supabase — the Flamingle Card, the "I'm Out" heat map, the whole digital layer of the movement. We need a builder who wants equity in something with real traction potential, not a contract gig.</p>
-          <a href="cto-collab.html" class="role-link">Learn More →</a>
         </div>
 
       </div>
