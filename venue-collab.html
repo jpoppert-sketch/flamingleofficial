@@ -229,6 +229,32 @@
       margin: 60px 0;
     }
 
+    /* ─── APP GALLERY ─── */
+    .app-gallery {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 28px 0;
+    }
+
+    .app-gallery img {
+      width: 260px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    }
+
+    .app-gallery-caption {
+      text-align: center;
+      font-size: 13px;
+      color: var(--charcoal);
+      opacity: 0.6;
+      margin-top: -10px;
+      margin-bottom: 28px;
+    }
+
     /* ─── CTA ─── */
     .cta {
       background: var(--charcoal);
@@ -276,6 +302,28 @@
     }
 
     .btn-email:hover { background: var(--coral-dark); }
+
+    .btn-outline {
+      display: inline-block;
+      padding: 14px 32px;
+      background: transparent;
+      color: var(--white);
+      font-family: 'Nunito', Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      border-radius: 8px;
+      border: 2px solid rgba(255,255,255,0.35);
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .btn-outline:hover { border-color: var(--coral); color: var(--coral); }
+
+    .cta-secondary-note {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      margin-top: 16px;
+    }
 
     /* ─── FOUNDER LINK ─── */
     .founder-link {
@@ -406,6 +454,13 @@
       <div class="section-eyebrow">The Actual Platform</div>
       <h2>Set Up Your Profile and Happenings in Minutes.</h2>
       <p>This isn't a static listing. Your venue gets a real dashboard — add a trivia night, a happy hour, a live show, a class, a league night, whatever your thing is, and it's on the map in a couple minutes. Set the date, the time, the cover if there is one, done. Use the AI assistant to draft your social post, push it out to the wire, done.</p>
+
+      <div class="app-gallery">
+        <img src="map-preview-1.png" alt="Flamingle map showing a venue pin in Denver">
+        <img src="map-preview-2.png" alt="Venue detail panel showing happy hour, perks, and upcoming events">
+      </div>
+      <p class="app-gallery-caption">The actual app — not a mockup. This is what Flaminglers see when they tap your pin.</p>
+
       <p><a href="https://app.flamingleofficial.com/dashboard-preview" style="color:var(--coral); text-decoration:underline; font-weight:600;">See a sample dashboard →</a></p>
       <p>Get as creative as you want. Run a Flamingle mixer, or just list your regular happenings and make them flock-inclusive too — either way, Flaminglers nearby see what's on and when.</p>
 
@@ -443,15 +498,15 @@
         <div class="step">
           <div class="step-number">1</div>
           <div class="step-content">
-            <h3>Talk to me directly</h3>
-            <p>Reply to my email. Tell me about your venue — what you do, where you are, what nights you'd want Flaminglers showing up. I live right here in Denver, too — invite me over and we can talk through the details in person.</p>
+            <h3>Complete the quick application</h3>
+            <p><a href="https://app.flamingleofficial.com/apply" style="color:var(--coral); text-decoration:underline; font-weight:600;">Fill out the short venue application</a> — a few minutes, tell us about your venue, your hours, and what nights you'd want Flaminglers showing up. I personally review every application myself. Prefer to talk it through first? Just reply to my email — I live right here in Denver too, and I'm happy to meet in person.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-number">2</div>
           <div class="step-content">
-            <h3>Get your Official Flock Spot marker + app profile</h3>
-            <p>I'll send you your Official Flock Spot marker and set up your venue profile in the app — events, location, and any discounts you want listed. Want to go even further? Sell our merchandise at your venue — we'll provide a starter inventory, and you get a commission on every purchase.</p>
+            <h3>Get approved — your profile's already live</h3>
+            <p>I review every application personally, usually within a day or two. Since you set up your own profile in the application — events, location, discounts — there's nothing left to build once you're approved. I'll follow up directly to get you your physical Official Flock Spot marker, and go over the merch commission program if you want to sell inventory in-house.</p>
           </div>
         </div>
         <div class="step">
@@ -491,6 +546,9 @@
       <div>
         <a href="mailto:jpoppert@gmail.com?subject=Official Flock Spot — Founding Partner Interest" class="btn-email">Let's Meet →</a>
       </div>
+      <p class="cta-secondary-note">Already sold? Skip the meeting.<br>
+        <a href="https://app.flamingleofficial.com/apply" class="btn-outline" style="margin-top: 10px;">Apply Directly →</a>
+      </p>
     </div>
   </section>
 
