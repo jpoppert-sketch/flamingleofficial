@@ -31,6 +31,8 @@
       padding: 12px 24px;
       display: flex;
       align-items: center;
+      justify-content: space-between;
+      gap: 16px;
     }
 
     .nav-logo-img {
@@ -38,6 +40,18 @@
       width: auto;
       display: block;
     }
+
+    .nav-learn-more {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-learn-more:hover { color: var(--coral); }
 
     /* ─── HERO ─── */
     .hero {
@@ -378,6 +392,7 @@
   <!-- NAV -->
   <nav class="nav">
     <a href="index.html"><img src="flamingo_logo_transparent.png" alt="Flamingle" class="nav-logo-img"></a>
+    <a href="ecosystem.html" class="nav-learn-more">Learn About the Movement →</a>
   </nav>
 
   <!-- HERO -->
