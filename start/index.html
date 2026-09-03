@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Flamingle — Start Here (bracelet landing) v1 -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start Here — Flamingle</title>
+  <meta name="description" content="You've got your coral. Here's what to do next: find a Flock Spot and learn how to Flamingle.">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --coral: #f77a70;
+      --coral-dark: #e8635a;
+      --coral-light: #fde4e2;
+      --charcoal: #2C2C2C;
+      --white: #ffffff;
+    }
+
+    html, body { height: 100%; }
+
+    body {
+      font-family: 'Nunito', Arial, sans-serif;
+      color: var(--charcoal);
+      background: var(--white);
+      min-height: 100vh;
+    }
+
+    /* ─── NAV ─── */
+    .nav {
+      background: var(--white);
+      border-bottom: 2px solid var(--coral-light);
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      position: relative;
+    }
+    .nav-logo-img { height: 40px; width: auto; display: block; }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-links a {
+      font-size: 13px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--charcoal);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--coral); }
+    .nav-links a.nav-cta {
+      background: var(--coral); color: #fff; padding: 7px 16px;
+      border-radius: 20px; transition: background 0.2s;
+    }
+    .nav-links a.nav-cta:hover { background: #d45f49; }
+    .nav-hamburger {
+      display: none; flex-direction: column; justify-content: center;
+      gap: 5px; background: none; border: none; cursor: pointer; padding: 4px;
+    }
+    .nav-hamburger span {
+      display: block; width: 24px; height: 2px; background: var(--charcoal);
+      border-radius: 2px; transition: all 0.25s;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav-mobile {
+      display: none; flex-direction: column; background: var(--white);
+      border-bottom: 2px solid var(--coral-light); padding: 16px 24px 24px;
+    }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a {
+      font-size: 14px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--charcoal); text-decoration: none;
+      padding: 14px 0; border-bottom: 1px solid var(--coral-light); transition: color 0.2s;
+    }
+    .nav-mobile a:last-child { border-bottom: none; }
+    .nav-mobile a:hover { color: var(--coral); }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      background: var(--coral-light);
+      padding: 64px 24px 56px;
+      text-align: center;
+    }
+    .hero-inner { max-width: 640px; margin: 0 auto; }
+    .hero-eyebrow {
+      font-size: 11px; font-weight: 700; letter-spacing: 5px;
+      text-transform: uppercase; color: var(--coral); margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-family: 'Abril Fatface', Georgia, serif;
+      font-size: clamp(36px, 7vw, 64px);
+      color: var(--coral); line-height: 1.1; margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: clamp(16px, 2.4vw, 19px);
+      line-height: 1.6; color: var(--charcoal); max-width: 460px; margin: 0 auto;
+    }
+
+    /* ─── DOORS ─── */
+    .doors { padding: 64px 24px; }
+    .doors-inner {
+      max-width: 880px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;
+    }
+    .door {
+      display: flex; flex-direction: column;
+      border: 2px solid var(--coral-light);
+      border-radius: 18px; padding: 36px 32px;
+      text-decoration: none; color: var(--charcoal);
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+      background: var(--white);
+    }
+    .door:hover {
+      border-color: var(--coral);
+      transform: translateY(-4px);
+      box-shadow: 0 14px 34px rgba(247,122,112,0.18);
+    }
+    .door-kicker {
+      font-size: 11px; font-weight: 700; letter-spacing: 3px;
+      text-transform: uppercase; color: var(--coral); margin-bottom: 14px;
+    }
+    .door h2 {
+      font-family: 'Abril Fatface', Georgia, serif;
+      font-size: clamp(24px, 3.4vw, 30px);
+      color: var(--charcoal); line-height: 1.2; margin-bottom: 12px;
+    }
+    .door p { font-size: 15px; line-height: 1.65; color: #6b5f5c; margin-bottom: 24px; flex: 1; }
+    .door-go {
+      font-weight: 800; font-size: 14px; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--coral);
+    }
+
+    /* ─── THE IDEA ─── */
+    .idea { background: var(--charcoal); padding: 72px 24px; text-align: center; }
+    .idea-inner { max-width: 860px; margin: 0 auto; }
+    .idea .eyebrow {
+      font-size: 11px; font-weight: 700; letter-spacing: 5px;
+      text-transform: uppercase; color: var(--coral); margin-bottom: 14px;
+    }
+    .idea h2 {
+      font-family: 'Abril Fatface', Georgia, serif;
+      font-size: clamp(26px, 4.6vw, 42px); color: var(--white);
+      line-height: 1.2; margin-bottom: 44px;
+    }
+    .moves { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 28px; }
+    .move {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px; padding: 30px 22px; text-align: left;
+    }
+    .move-num {
+      font-family: 'Abril Fatface', Georgia, serif;
+      font-size: 40px; color: var(--coral); line-height: 1; margin-bottom: 14px;
+    }
+    .move h3 { font-size: 16px; font-weight: 800; color: var(--white); margin-bottom: 8px; }
+    .move p { font-size: 14px; line-height: 1.65; color: rgba(255,255,255,0.62); }
+
+    /* ─── SHARE ─── */
+    .share { background: var(--coral-light); padding: 64px 24px; text-align: center; }
+    .share-inner { max-width: 540px; margin: 0 auto; }
+    .share h2 {
+      font-family: 'Abril Fatface', Georgia, serif;
+      font-size: clamp(24px, 4vw, 36px); color: var(--charcoal);
+      line-height: 1.2; margin-bottom: 14px;
+    }
+    .share p { font-size: 16px; line-height: 1.7; color: var(--charcoal); opacity: 0.85; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--charcoal);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 24px; text-align: center;
+    }
+    footer p { font-size: 12px; color: rgba(255,255,255,0.3); }
+    footer a { color: rgba(255,255,255,0.45); text-decoration: none; }
+    footer a:hover { color: var(--coral); }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="/index.html"><img src="/flamingo_logo_transparent.png" alt="Flamingle" class="nav-logo-img"></a>
+    <div class="nav-links">
+      <a href="https://app.flamingleofficial.com" class="nav-cta">Find a Flock Spot</a>
+      <a href="/field-guide.html">Field Guide</a>
+      <a href="/index.html">Home</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="https://app.flamingleofficial.com">Find a Flock Spot</a>
+    <a href="/field-guide.html">Field Guide</a>
+    <a href="/index.html">Home</a>
+    <a href="/contact.html">Contact</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">You've got your coral</p>
+      <h1>Welcome to the flock.</h1>
+      <p>Three bracelets in the box. Keep the one that fits, give the other two to single friends. Then do these two things.</p>
+    </div>
+  </section>
+
+  <!-- DOORS -->
+  <section class="doors">
+    <div class="doors-inner">
+      <a class="door" href="https://app.flamingleofficial.com">
+        <div class="door-kicker">Where to go</div>
+        <h2>Find a Flock Spot</h2>
+        <p>The map of bars, caf&eacute;s, and hangouts where the flock gathers &mdash; and the places that fly the flamingo themselves. Wear your coral there and you're already in good company.</p>
+        <span class="door-go">Open the map &rarr;</span>
+      </a>
+      <a class="door" href="/field-guide.html">
+        <div class="door-kicker">How it works</div>
+        <h2>Learn how to Flamingle</h2>
+        <p>The Field Guide: what the coral means, how to spot it on someone else, and how to actually walk over and say hello. Short, a little ridiculous, mercifully free of dating advice.</p>
+        <span class="door-go">Read the Field Guide &rarr;</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- THE IDEA -->
+  <section class="idea">
+    <div class="idea-inner">
+      <p class="eyebrow">The whole idea</p>
+      <h2>Three moves. That's the movement.</h2>
+      <div class="moves">
+        <div class="move">
+          <div class="move-num">01</div>
+          <h3>Put it on when you go out</h3>
+          <p>Heading to a bar, a coffee shop, a show, a park? Slide on the coral. It says one thing: off the apps, open to something real.</p>
+        </div>
+        <div class="move">
+          <div class="move-num">02</div>
+          <h3>Spot the coral on someone else</h3>
+          <p>Same band, same meaning. You just found someone who's also here to meet people in person &mdash; and who's already told you it's okay to come say hi.</p>
+        </div>
+        <div class="move">
+          <div class="move-num">03</div>
+          <h3>Walk over. Say hi.</h3>
+          <p>Either person can start it. &ldquo;Nice flamingo&rdquo; works. The band did the hard part &mdash; you just have to show up.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHARE -->
+  <section class="share">
+    <div class="share-inner">
+      <h2>You've got two to give away.</h2>
+      <p>Hand them to single friends who are tired of swiping. The flock grows one wrist at a time &mdash; and it's more fun when the people you know are wearing it too.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Flamingle, LLC. Denver, CO. &nbsp;&middot;&nbsp; <a href="/index.html">flamingleofficial.com</a></p>
+  </footer>
+
+  <script>
+    var hamburger = document.getElementById("hamburger");
+    var mobileMenu = document.getElementById("nav-mobile");
+    hamburger.addEventListener("click", function () {
+      hamburger.classList.toggle("open");
+      mobileMenu.classList.toggle("open");
+    });
+  </script>
+</body>
+</html>
